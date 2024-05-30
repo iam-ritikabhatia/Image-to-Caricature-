@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caricature Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Create Your Caricature</h1>
+        <div class="upload-section">
+            <label for="imageInput" class="upload-label">
+                <input type="file" id="imageInput" accept="image/*" class="file-input">
+                <span class="upload-button">Choose Image</span>
+            </label>
+            <button id="uploadButton" class="upload-button" onclick="uploadImage()">Generate Caricature</button>
+        </div>
+        <div id="result" class="result-container">
+            <p id="loadingText" class="loading-text">Generating caricature...</p>
+            <img id="caricatureImage" class="caricature-image" src="#" alt="Caricature Image">
+            <p id="errorMessage" class="error-message"></p>
+        </div>
+    </div>
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
